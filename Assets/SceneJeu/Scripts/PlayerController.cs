@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         capsule = GetComponent<NavMeshAgent>();
+        capsule.updateRotation = false;
+        capsule.transform.RotateAround(Vector3.left, 90);
     }
 
     // Update is called once per frame
