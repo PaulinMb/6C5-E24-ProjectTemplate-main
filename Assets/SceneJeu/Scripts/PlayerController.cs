@@ -5,26 +5,43 @@ using UnityEngine.AI;
 
 public class PlayerController : MonoBehaviour
 {
-    NavMeshAgent capsule;
+    private NavMeshAgent player;
+    public Transform[] goals;
+    private List<int> visitedGoals = new List<int>();
 
-    public GameObject goal;
-    public bool shouldMove = false;
-
-    // Start is called before the first frame update
     void Start()
     {
-        capsule = GetComponent<NavMeshAgent>();
-        capsule.updateRotation = false;
-        capsule.transform.RotateAround(Vector3.left, 90);
+        player = GetComponent<NavMeshAgent>();
+        SetRandomGoal();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (shouldMove)
+        if (player.remainingDistance <= player.stoppingDistance)
         {
-            capsule.SetDestination(goal.transform.position);
+            SetRandomGoal();
         }
     }
-}
 
+    void SetRandomGoal()
+    {
+        // Si tous les buts ont été visités, réinitialiser la liste des buts visités
+        if (visitedGoals.Count == goals.Length)
+        {
+            visitedGoals.Clear();
+        }
+
+        // Choisir un nouvel index de but aléatoire parmi les buts non visités
+        int newGoalIndex;
+        do
+        {
+            newGoalIndex = Random.Range(0, goals.Length);
+        } while (visitedGoals.Contains(newGoalIndex));
+
+        // Mettre à jour la liste des buts visités
+        visitedGoals.Add(newGoalIndex);
+
+        // Définir la destination du personnage vers le nouveau but
+        player.SetDestination(goals[newGoalIndex].position);
+    }
+}

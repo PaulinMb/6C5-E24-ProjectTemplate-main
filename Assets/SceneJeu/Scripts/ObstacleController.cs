@@ -5,8 +5,8 @@ using UnityEngine;
 public class ObstacleController : MonoBehaviour
 {
 
-    public float amplitude = .1f;
-    public float speed = .1f;
+    private float amplitude = .1f;
+    private float speed = .1f;
 
     // Start is called before the first frame update
     void Start()
