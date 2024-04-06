@@ -18305,6 +18305,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1782962532}
   cameraHeight: 1.9
+  cameraPlayer: {fileID: 1961566871}
+  cameraMain: {fileID: 963194227}
 --- !u!1 &1964478651
 GameObject:
   m_ObjectHideFlags: 0
