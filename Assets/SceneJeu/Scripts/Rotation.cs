@@ -1,57 +1,39 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Rotation : MonoBehaviour
 {
-    [SerializeField]
-    private float speed;
-    [SerializeField]
-    private float increment;
-    [SerializeField]
-    private float maxSpeed;
+     public float speed; // Vitesse de rotation
+     private float increment = 5f; // Incrément de vitesse
+     private float maxSpeed = 350f; // Vitesse maximale
 
-    private float xAngle;
-    private float yAngle;
-    private float zAngle;
-
-
-    private void Start()
-    {
-        setSpeed(0);
-    }
-    //FixedUpdate appelé à des temps fixes VS Update dépend du taux de rafraichissement (once by frame)
     void FixedUpdate()
     {
-        adjustSpeed();
-        transform.Rotate(xAngle * Time.deltaTime, yAngle * Time.deltaTime, zAngle * Time.deltaTime, Space.World);
+        AdjustSpeed();
+        // Appliquer la rotation en fonction de la vitesse
+        transform.Rotate(speed * Time.deltaTime, speed * Time.deltaTime, speed * Time.deltaTime, Space.World);
     }
-    private void adjustSpeed()
+
+    private void AdjustSpeed()
     {
+        // Augmenter la vitesse si la touche "haut" est enfoncée
         if (Input.GetKey("up"))
         {
-            setSpeed(+increment);
+            SetSpeed(+increment);
         }
 
+        // Diminuer la vitesse si la touche "bas" est enfoncée
         if (Input.GetKey("down"))
         {
-            setSpeed(-increment);
+            SetSpeed(-increment);
         }
     }
 
-    private void setSpeed(float increment = 0)
+    private void SetSpeed(float increment)
     {
-        if (increment != 0)
-        {
-            if ((speed <= -maxSpeed && increment > 0) || (maxSpeed <= speed && increment < 0))
-            {
-                speed = speed + increment;
-            }
-            else
-                speed = increment < 0 ? Math.Max(-maxSpeed, speed + increment) : Math.Min(+maxSpeed, speed + increment);
-        }
-        Debug.Log("speed : " + speed + " - increment : " + increment);
-        xAngle = speed;
-        yAngle = speed;
-        zAngle = speed;
+        // Ajouter l'incrément à la vitesse actuelle
+        speed += increment;
+
+        // Limiter la vitesse entre -maxSpeed et +maxSpeed
+        speed = Mathf.Clamp(speed, -maxSpeed, maxSpeed);
     }
 }
