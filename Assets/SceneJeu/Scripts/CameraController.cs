@@ -8,12 +8,18 @@ public class CameraController : MonoBehaviour
     public float cameraHeight = 2f; // Hauteur constante de la caméra
     private Vector3 offset; // Offset par rapport au joueur
 
+    public Camera cameraPlayer;
+    public Camera cameraMain;
+
     void Start()
     {
         // Calculer l'offset initial entre la caméra et le joueur
         offset = transform.position - player.position;
         // Fixer la hauteur de la caméra
         offset.y = cameraHeight;
+
+        // Assurer que la caméra du joueur est désactivée au démarrage
+        cameraPlayer.enabled = false;
     }
 
     void LateUpdate()
@@ -23,5 +29,13 @@ public class CameraController : MonoBehaviour
 
         // Faire en sorte que la caméra regarde dans la même direction que le joueur
         transform.rotation = Quaternion.Euler(player.eulerAngles.x, player.eulerAngles.y, player.eulerAngles.z);
+
+        // Si la touche C est enfoncée
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            // Changer l'état d'activité des caméras
+            cameraPlayer.enabled = !cameraPlayer.enabled;
+            cameraMain.enabled = !cameraMain.enabled;
+        }
     }
 }
