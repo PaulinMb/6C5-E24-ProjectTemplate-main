@@ -23851,15 +23851,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock1
       objectReference: {fileID: 0}
+    - target: {fileID: 4394596365617767583, guid: f4f0265f7bb67ff4e97cc0fe8eac6727, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4394596365617767583, guid: f4f0265f7bb67ff4e97cc0fe8eac6727, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 7401009757226673968}
-    - targetCorrespondingSourceObject: {fileID: 4394596365617767583, guid: f4f0265f7bb67ff4e97cc0fe8eac6727, type: 3}
-      insertIndex: -1
+      insertIndex: 3
       addedObject: {fileID: 7401009757226673972}
   m_SourcePrefab: {fileID: 100100000, guid: f4f0265f7bb67ff4e97cc0fe8eac6727, type: 3}
 --- !u!1001 &3218155322820329069
@@ -24100,22 +24101,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79c45a779c1dc754caf1fc3a8713999a, type: 3}
---- !u!208 &7401009757226673968
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4731035615402604693}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!65 &7401009757226673972
 BoxCollider:
   m_ObjectHideFlags: 0
