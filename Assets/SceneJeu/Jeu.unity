@@ -5991,7 +5991,7 @@ MonoBehaviour:
   - {fileID: 1581028851466626610, guid: 95f095701b85024468c60118c90aaea5, type: 3}
   - {fileID: 7844761076242026213, guid: 428044d1aa601f548aabab2f8050e358, type: 3}
   - {fileID: 1581028851466626610, guid: eb0ca0f98e64f1f4d9128672cdf59e5a, type: 3}
-  spawnInterval: 1.5
+  spawnInterval: 1
 --- !u!1 &648424154
 GameObject:
   m_ObjectHideFlags: 0
@@ -17949,6 +17949,7 @@ GameObject:
   - component: {fileID: 1782962534}
   - component: {fileID: 1782962536}
   - component: {fileID: 1782962535}
+  - component: {fileID: 1782962537}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -18035,6 +18036,27 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!65 &1782962537
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782962531}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.773998, y: 1.9436623, z: 0.5809577}
+  m_Center: {x: -0.012138486, y: 0.9725322, z: -0.015764564}
 --- !u!1 &1862449130
 GameObject:
   m_ObjectHideFlags: 0
@@ -18065,7 +18087,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3748976668506421589}
-  - {fileID: 8713349640119944601}
   - {fileID: 8713349640063286028}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -23837,6 +23858,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4394596365617767583, guid: f4f0265f7bb67ff4e97cc0fe8eac6727, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7401009757226673968}
+    - targetCorrespondingSourceObject: {fileID: 4394596365617767583, guid: f4f0265f7bb67ff4e97cc0fe8eac6727, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7401009757226673972}
   m_SourcePrefab: {fileID: 100100000, guid: f4f0265f7bb67ff4e97cc0fe8eac6727, type: 3}
 --- !u!1001 &3218155322820329069
 PrefabInstance:
@@ -24019,63 +24043,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7057c0a189967c47b0c36d0bc04042c, type: 3}
---- !u!1001 &5536751087762657654
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1862449131}
-    m_Modifications:
-    - target: {fileID: 1217871561644715549, guid: 45601fd08b5853e418b9eda04042a8cf, type: 3}
-      propertyPath: m_Name
-      value: Champignon
-      objectReference: {fileID: 0}
-    - target: {fileID: 7684619960571293536, guid: 45601fd08b5853e418b9eda04042a8cf, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -15.91123
-      objectReference: {fileID: 0}
-    - target: {fileID: 7684619960571293536, guid: 45601fd08b5853e418b9eda04042a8cf, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7684619960571293536, guid: 45601fd08b5853e418b9eda04042a8cf, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 6.215245
-      objectReference: {fileID: 0}
-    - target: {fileID: 7684619960571293536, guid: 45601fd08b5853e418b9eda04042a8cf, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7684619960571293536, guid: 45601fd08b5853e418b9eda04042a8cf, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7684619960571293536, guid: 45601fd08b5853e418b9eda04042a8cf, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7684619960571293536, guid: 45601fd08b5853e418b9eda04042a8cf, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7684619960571293536, guid: 45601fd08b5853e418b9eda04042a8cf, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7684619960571293536, guid: 45601fd08b5853e418b9eda04042a8cf, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7684619960571293536, guid: 45601fd08b5853e418b9eda04042a8cf, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 45601fd08b5853e418b9eda04042a8cf, type: 3}
 --- !u!1001 &6959814134744894766
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24149,15 +24116,31 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
+--- !u!65 &7401009757226673972
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4731035615402604693}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.3195138, y: 2.861879, z: 1}
+  m_Center: {x: -0.1597569, y: 1.282663, z: 0}
 --- !u!4 &8713349640063286028 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6572404230577926346, guid: b7057c0a189967c47b0c36d0bc04042c, type: 3}
   m_PrefabInstance: {fileID: 5066453361387479008}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &8713349640119944601 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7684619960571293536, guid: 45601fd08b5853e418b9eda04042a8cf, type: 3}
-  m_PrefabInstance: {fileID: 5536751087762657654}
   m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
