@@ -18,6 +18,12 @@ public class SphereRoller : MonoBehaviour
         {
             RollSphere(); // Appel pour démarrer un nouveau mouvement
         }
+
+        // Si l'objet n'est plus en contact avec le sol, le détruire
+        if (!IsOnGround())
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void RollSphere()
@@ -28,4 +34,13 @@ public class SphereRoller : MonoBehaviour
         // Appliquer une force dans la direction aléatoire
         rb.AddForce(randomDirection * speed, ForceMode.Impulse);
     }
+
+
+    private bool IsOnGround()
+    {
+        // Vérifier si l'objet est en collision avec le sol en utilisant un raycast vers le bas
+        RaycastHit hit;
+        return Physics.Raycast(transform.position, Vector3.down, out hit);
+    }
+
 }
