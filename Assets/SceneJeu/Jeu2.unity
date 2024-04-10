@@ -6070,7 +6070,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obstaclePrefabs:
   - {fileID: 1581028851466626610, guid: 95f095701b85024468c60118c90aaea5, type: 3}
-  - {fileID: 7844761076242026213, guid: 428044d1aa601f548aabab2f8050e358, type: 3}
+  - {fileID: 6466524468285953175, guid: 428044d1aa601f548aabab2f8050e358, type: 3}
   - {fileID: 1581028851466626610, guid: eb0ca0f98e64f1f4d9128672cdf59e5a, type: 3}
   spawnInterval: 1
 --- !u!1 &648424154
