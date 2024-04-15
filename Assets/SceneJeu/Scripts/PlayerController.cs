@@ -5,17 +5,17 @@ using UnityEngine.AI;
 
 public class PlayerController : MonoBehaviour
 {
-    private NavMeshAgent player;
+    protected NavMeshAgent player;
     public Transform[] goals;
     private List<int> visitedGoals = new List<int>();
 
-    void Start()
+    protected virtual void Start()
     {
         player = GetComponent<NavMeshAgent>();
         SetRandomGoal();
     }
 
-    void Update()
+    protected virtual void Update()
     {
         if (player.remainingDistance <= player.stoppingDistance)
         {
