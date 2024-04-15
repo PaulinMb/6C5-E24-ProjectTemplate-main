@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
+  - obstacleCrawl
   layers:
   - Default
   - TransparentFX
