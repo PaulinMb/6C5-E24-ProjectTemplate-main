@@ -8,11 +8,13 @@ public class DetectionGoal : MonoBehaviour
     private Animator animator;
     private const string PROCHE = "proche";
     private NavMeshAgent navMeshAgent;
+    private PlayerControllerWithSpeed playerController;
 
     void Start()
     {
         animator = GetComponent<Animator>();
         navMeshAgent = GetComponent<NavMeshAgent>();
+        playerController = GetComponent<PlayerControllerWithSpeed>(); // Récupérer le composant PlayerControllerWithSpeed
     }
 
     void Update()
@@ -38,5 +40,8 @@ public class DetectionGoal : MonoBehaviour
 
         // Mettre à jour le paramètre booléen de l'Animator en fonction de la proximité
         animator.SetBool(PROCHE, estProche);
+
+        // Appeler la méthode pour ajuster la vitesse dans PlayerControllerWithSpeed
+        playerController.AjusterVitesseProche(estProche);
     }
 }
