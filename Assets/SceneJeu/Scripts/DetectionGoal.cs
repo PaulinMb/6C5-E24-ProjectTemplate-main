@@ -10,11 +10,17 @@ public class DetectionGoal : MonoBehaviour
     private NavMeshAgent navMeshAgent;
     private PlayerControllerWithSpeed playerController;
 
+    private int animatorWinningHash;
+    private const string WINNIG = "winning";
+
+
+
     void Start()
     {
         animator = GetComponent<Animator>();
         navMeshAgent = GetComponent<NavMeshAgent>();
         playerController = GetComponent<PlayerControllerWithSpeed>(); // Récupérer le composant PlayerControllerWithSpeed
+        animatorWinningHash = Animator.StringToHash(WINNIG);
     }
 
     void Update()
@@ -33,6 +39,18 @@ public class DetectionGoal : MonoBehaviour
             {
                 // Si proche d'un objectif, le personnage est considéré comme proche
                 estProche = true;
+
+                // Vérifier si la distance seuil est inférieure à 0.1
+                if (distanceXZ < 0.1)
+                {
+                    // Définir le paramètre booléen "winning" sur true dans l'animator
+                    animator.SetBool(animatorWinningHash, true);
+                }
+                else
+                {
+                    // Définir le paramètre booléen "winning" sur false dans l'animator
+                    animator.SetBool(animatorWinningHash, false);
+                }
                 // Sortir de la boucle car le personnage est déjà proche d'un objectif
                 break;
             }
