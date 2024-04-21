@@ -35,11 +35,14 @@ public class ObstacleSpawner : MonoBehaviour
             // Instancier un nouvel obstacle à la position aléatoire avec une rotation aléatoire
             Instantiate(obstaclePrefab, spawnPosition, Quaternion.identity);
 
-            CalculComplexCPU();
+            //CalculComplexCPU();
 
         }
     }
 
+    //Consomation du CPU
+
+    /*
     private void CalculComplexCPU()
     {
         // Simulation d'une charge de travail importante sur le CPU
@@ -47,7 +50,7 @@ public class ObstacleSpawner : MonoBehaviour
         {
             for (int j = 0; j < 1000; j++) // Boucle imbriquée
             {
-                // Effectuer un calcul complexe (par exemple, multiplication de matrices)
+                // multiplication de matrices
                 MatrixMultiplication();
             }
         }
@@ -71,4 +74,6 @@ public class ObstacleSpawner : MonoBehaviour
             }
         }
     }
+
+    */
 }
