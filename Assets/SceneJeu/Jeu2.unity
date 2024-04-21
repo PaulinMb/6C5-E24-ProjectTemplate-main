@@ -244,7 +244,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.21666665
+  m_VoxelSize: 0.22666667
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: 3b2296e910fc07847b5c967840a93711, type: 2}
   m_BuildHeightMesh: 0
@@ -5993,7 +5993,7 @@ Transform:
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.09, z: -10.48}
+  m_LocalPosition: {x: 0, y: 3.09, z: -14.26}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6006,7 +6006,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 0657921b7be784f45a1611677b46b4e5, type: 3}
@@ -16488,7 +16488,7 @@ Transform:
   m_GameObject: {fileID: 1961566869}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.1, y: 1.688, z: 4.746}
+  m_LocalPosition: {x: 17.1, y: 1.688, z: 4.816}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
