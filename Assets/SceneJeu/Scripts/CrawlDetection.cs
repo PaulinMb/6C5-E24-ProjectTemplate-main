@@ -4,7 +4,7 @@ using UnityEngine.AI;
 public class CrawlDetection : MonoBehaviour
 {
     public float distanceSeuil = 5f; // Distance seuil pour considérer le personnage proche du goal
-    public Transform[] goals; // Tableau de références vers les objets "goal"
+    public Transform[] goals; 
     private Animator animator;
     private NavMeshAgent navMeshAgent;
     private const string CRAWL = "crawl";

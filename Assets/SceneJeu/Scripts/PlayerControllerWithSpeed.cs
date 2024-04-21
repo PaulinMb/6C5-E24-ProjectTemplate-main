@@ -5,11 +5,11 @@ using UnityEngine.AI;
 
 public class PlayerControllerWithSpeed : PlayerController
 {
-    // Paramètres de vitesse supplémentaires
+
     public float acceleration = 1f;
     public float deceleration = 3f;
     public float vitesseMax = 3f;
-    public float vitesseMin = 1.5f; // Nouvelle vitesse minimale lorsque proche
+    public float vitesseMin = 1.5f; // vitesse minimale limite lorsque proche
     private float vitesse = 0f;
 
     private Animator animator;
@@ -17,15 +17,15 @@ public class PlayerControllerWithSpeed : PlayerController
 
     protected override void Start()
     {
-        base.Start(); // Appeler la méthode Start de la classe de base
+        base.Start(); 
         animator = GetComponent<Animator>();
     }
 
     protected override void Update()
     {
-        base.Update(); // Appeler la méthode Update de la classe de base
+        base.Update(); 
 
-        // Mise à jour de la vitesse en fonction de la distance restante
+        // maj de la vitesse en fonction de la distance restante
         float distanceToTarget = player.remainingDistance;
         if (distanceToTarget > player.stoppingDistance)
         {

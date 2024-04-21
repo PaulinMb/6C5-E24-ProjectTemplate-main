@@ -13,10 +13,9 @@ public class SphereRoller : MonoBehaviour
 
     private void Update()
     {
-        // Si la magnitude de la vélocité de la sphère est très faible (presque immobile)
         if (rb.velocity.magnitude < 0.1f)
         {
-            RollSphere(); // Appel pour démarrer un nouveau mouvement
+            RollSphere(); 
         }
 
         // Si l'objet n'est plus en contact avec le sol, le détruire

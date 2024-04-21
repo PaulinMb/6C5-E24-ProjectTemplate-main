@@ -2,17 +2,15 @@ using UnityEngine;
 
 public class SphereController : MonoBehaviour
 {
-    public GameObject terrainBoundary; // Référence à l'objet qui marque les limites du terrain
-    public float speed = 2f; // Vitesse de déplacement de l'obstacle
+    public GameObject terrainBoundary; 
+    public float speed = 2f; 
 
-    private bool isGrounded = false; // Indique si l'obstacle est en contact avec le sol
+    private bool isGrounded = false;
 
     private void Start()
     {
-        // Si l'objet de limite de terrain n'est pas défini, afficher un avertissement
         if (terrainBoundary == null)
         {
-            Debug.LogWarning("Terrain boundary reference is missing.");
         }
     }
 

@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class ObstacleSpawner : MonoBehaviour
 {
-    public List<GameObject> obstaclePrefabs; // Liste des prefabs d'obstacles à instancier
-    public float spawnInterval = 2f; // Intervalle de spawn des obstacles
+    public List<GameObject> obstaclePrefabs; 
+    public float spawnInterval = 2f; 
 
-    private float timer; // Timer pour suivre le temps écoulé depuis le dernier spawn
+    private float timer;
 
     private void Start()
     {
@@ -16,14 +16,14 @@ public class ObstacleSpawner : MonoBehaviour
 
     private void Update()
     {
-        // Mettre à jour le timer
+        
         timer += Time.deltaTime;
 
-        // Si le timer dépasse l'intervalle de spawn
+        
         if (timer >= spawnInterval)
         {
             
-            // Réinitialiser le timer
+            
             timer = 0f;
 
             // Choisir un prefab d'obstacle aléatoire parmi la liste
@@ -40,7 +40,7 @@ public class ObstacleSpawner : MonoBehaviour
         }
     }
 
-    //Consomation du CPU
+    //Consomation du CPU "SIMULATION A CORRIGER"
 
     /*
     private void CalculComplexCPU()

@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class ObstacleController : MonoBehaviour
 {
-    public GameObject limitObject; // Référence à l'objet qui détermine les limites horizontales
-    public float speed = 2f; // Vitesse du mouvement
+    public GameObject limitObject; 
+    public float speed = 2f;
 
-    private float minX; // Limite horizontale gauche de déplacement
-    private float maxX; // Limite horizontale droite de déplacement
-    private int direction = 1; // Direction du déplacement (1 pour droite, -1 pour gauche)
+    private float minX; 
+    private float maxX; 
+    private int direction = 1;
 
     void Start()
     {
@@ -22,9 +22,8 @@ public class ObstacleController : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("Limit object reference is missing.");
-            minX = -5f; // Définir une valeur par défaut pour minX
-            maxX = 5f; // Définir une valeur par défaut pour maxX
+            minX = -5f; 
+            maxX = 5f;
         }
 
         // Initialiser la direction du déplacement aléatoirement
@@ -36,7 +35,6 @@ public class ObstacleController : MonoBehaviour
         // Calculer le déplacement horizontal en fonction de la vitesse et de la direction
         float horizontalMovement = direction * speed * Time.deltaTime;
 
-        // Calculer la nouvelle position horizontale
         float newXPosition = transform.position.x + horizontalMovement;
 
         // Limiter la nouvelle position horizontale dans les limites récupérées de l'objet référencé
