@@ -22,6 +22,7 @@ public class ObstacleSpawner : MonoBehaviour
         // Si le timer dépasse l'intervalle de spawn
         if (timer >= spawnInterval)
         {
+            
             // Réinitialiser le timer
             timer = 0f;
 
@@ -33,6 +34,41 @@ public class ObstacleSpawner : MonoBehaviour
 
             // Instancier un nouvel obstacle à la position aléatoire avec une rotation aléatoire
             Instantiate(obstaclePrefab, spawnPosition, Quaternion.identity);
+
+            CalculComplexCPU();
+
+        }
+    }
+
+    private void CalculComplexCPU()
+    {
+        // Simulation d'une charge de travail importante sur le CPU
+        for (int i = 0; i < 1000; i++) // Boucle principale
+        {
+            for (int j = 0; j < 1000; j++) // Boucle imbriquée
+            {
+                // Effectuer un calcul complexe (par exemple, multiplication de matrices)
+                MatrixMultiplication();
+            }
+        }
+    }
+
+    private void MatrixMultiplication()
+    {
+        // Simulation d'une opération de multiplication de matrices
+        float[,] matrixA = new float[10, 10];
+        float[,] matrixB = new float[10, 10];
+        float[,] result = new float[10, 10];
+
+        for (int i = 0; i < 10; i++)
+        {
+            for (int j = 0; j < 10; j++)
+            {
+                for (int k = 0; k < 10; k++)
+                {
+                    result[i, j] += matrixA[i, k] * matrixB[k, j];
+                }
+            }
         }
     }
 }
